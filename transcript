@@ -1,0 +1,550 @@
+# //  Questa Sim-64
+# //  Version 2023.4_1 linux_x86_64 Nov 22 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim 1 
+# Start time: 10:57:39 on Nov 18,2025
+# ** Error (suppressible): (vsim-19) Failed to access library 'work' at "work".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 10:57:39 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Loading project Lqb!
+# reading /opt/questa/questasim/linux_x86_64/../modelsim.ini
+# Loading project lab1
+
+
+
+vcom
+vcom +acc=rw arb1.vhd arb_tb1,vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:01:48 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1,vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# ** Error: arb1.vhd(58): near "when": (vcom-1576) expecting END.
+# ** Error: arb1.vhd(62): near "else": (vcom-1576) expecting END or WHEN.
+# ** Error: arb1.vhd(68): near "when": (vcom-1576) expecting END.
+# ** Error: arb1.vhd(72): near "else": (vcom-1576) expecting END.
+# ** Error: arb1.vhd(76): near "if": (vcom-1576) expecting ';'.
+# ** Note: arb1.vhd(76): VHDL Compiler exiting
+# End time: 11:01:48 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:01:53 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# ** Error: arb1.vhd(58): near "when": (vcom-1576) expecting END.
+# ** Error: arb1.vhd(62): near "else": (vcom-1576) expecting END or WHEN.
+# ** Error: arb1.vhd(68): near "when": (vcom-1576) expecting END.
+# ** Error: arb1.vhd(72): near "else": (vcom-1576) expecting END.
+# ** Error: arb1.vhd(76): near "if": (vcom-1576) expecting ';'.
+# ** Note: arb1.vhd(76): VHDL Compiler exiting
+# End time: 11:01:53 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1,vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:02:27 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1,vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# ** Error: arb1.vhd(98): near "if": (vcom-1576) expecting CASE.
+# ** Error: arb1.vhd(105): near "if": (vcom-1576) expecting PROCESS.
+# ** Error: arb1.vhd(123): near "if": (vcom-1576) expecting ';'.
+# ** Note: arb1.vhd(123): VHDL Compiler exiting
+# End time: 11:02:27 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:02:51 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# ** Error: arb1.vhd(98): near "if": (vcom-1576) expecting CASE.
+# ** Error: arb1.vhd(105): near "if": (vcom-1576) expecting PROCESS.
+# ** Error: arb1.vhd(123): near "if": (vcom-1576) expecting ';'.
+# ** Note: arb1.vhd(123): VHDL Compiler exiting
+# End time: 11:02:51 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:03:10 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# ** Error: arb_tb1.vhd(69): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(69): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(72): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(72): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(73): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(73): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(74): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(74): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(75): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(75): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(76): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(76): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Warning: arb_tb1.vhd(88): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+# ** Note: arb_tb1.vhd(90): VHDL Compiler exiting
+# End time: 11:03:11 on Nov 18,2025, Elapsed time: 0:00:01
+# Errors: 15, Warnings: 2
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:04:22 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# ** Error: arb_tb1.vhd(69): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(69): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(72): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(72): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(73): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(73): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(74): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(74): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(75): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(75): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(76): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(76): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Note: arb_tb1.vhd(90): VHDL Compiler exiting
+# End time: 11:04:22 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 15, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:05:05 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# ** Error: arb_tb1.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(72): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(72): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(73): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(73): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(74): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(74): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(75): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(75): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(76): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Error: arb_tb1.vhd(76): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+# ** Note: arb_tb1.vhd(90): VHDL Compiler exiting
+# End time: 11:05:05 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 13, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:07:31 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# ** Error: arb_tb1.vhd(78): near "'": syntax error
+# ** Note: arb_tb1.vhd(90): VHDL Compiler exiting
+# End time: 11:07:31 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:08:28 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# ** Error: arb_tb1.vhd(78): near "'": syntax error
+# ** Note: arb_tb1.vhd(89): VHDL Compiler exiting
+# End time: 11:08:28 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:08:45 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# ** Error: arb_tb1.vhd(79): near "'": syntax error
+# ** Note: arb_tb1.vhd(89): VHDL Compiler exiting
+# End time: 11:08:45 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:11:13 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# ** Error: arb_tb1.vhd(83): near "after": syntax error
+# ** Note: arb_tb1.vhd(89): VHDL Compiler exiting
+# End time: 11:11:13 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:11:41 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# End time: 11:11:41 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:11:42 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# End time: 11:11:42 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vsim work.arb(behavioral)
+# vsim work.arb(behavioral) 
+# Start time: 11:12:11 on Nov 18,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# QuestaSim-64 vopt 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# QuestaSim-64 vopt 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.arb(behavioral)#1
+add wave -position insertpoint sim:/arb/*
+add wave -position insertpoint sim:/arb/*
+run
+add wave -position insertpoint sim:/arb/*
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
+vsim work.arb_tb1
+# End time: 11:14:47 on Nov 18,2025, Elapsed time: 0:02:36
+# Errors: 0, Warnings: 6
+# vsim work.arb_tb1 
+# Start time: 11:14:47 on Nov 18,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# QuestaSim-64 vopt 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# QuestaSim-64 vopt 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=10.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.arb_tb1(behavior)#1
+# Loading work.arb(behavioral)#1
+add wave -position insertpoint sim:/arb_tb1/*
+run
+run
+run
+vcom +acc=rw arb1.vhd arb_tb1,vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:15:36 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1,vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# ** Error: (vcom-7) Failed to open design unit file "arb_tb1,vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 11:15:36 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:15:46 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# End time: 11:15:46 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+add wave sim:/arb_tb1/*
+run
+add wave -position insertpoint sim:/arb_tb1/stim_proc/*
+# (vish-4014) No objects found matching 'sim:/arb_tb1/stim_proc/*'.
+add wave -position insertpoint sim:/arb_tb1/stim_proc/*
+# (vish-4014) No objects found matching 'sim:/arb_tb1/stim_proc/*'.
+add wave -position insertpoint sim:/arb_tb1/uut/*
+run
+run
+run
+run
+run
+vcom +acc=rw arb1.vhd arb_tb1,vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:26:12 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1,vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# ** Error: (vcom-7) Failed to open design unit file "arb_tb1,vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 11:26:12 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:26:19 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# ** Error: arb_tb1.vhd(69): Enumeration literal '!' is type std.STANDARD.CHARACTER; expecting type ieee.std_logic_1164.STD_LOGIC.
+# ** Note: arb_tb1.vhd(88): VHDL Compiler exiting
+# End time: 11:26:19 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# /opt/questa/questasim/linux_x86_64/vcom failed.
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:26:30 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# End time: 11:26:30 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=10.
+run
+add wave -position insertpoint sim:/arb_tb1/uut/*
+quit -sim
+# End time: 11:29:58 on Nov 18,2025, Elapsed time: 0:15:11
+# Errors: 0, Warnings: 11
+vsim work.arb_tb1(behavior)
+# vsim work.arb_tb1(behavior) 
+# Start time: 11:30:13 on Nov 18,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.arb_tb1(behavior)#1
+# Loading work.arb(behavioral)#1
+add wave -position insertpoint sim:/arb_tb1/uut/*
+run
+run
+run
+run
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:31:19 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# End time: 11:31:19 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# QuestaSim-64 vopt 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# QuestaSim-64 vopt 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=7.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.arb_tb1(behavior)#1
+# Loading work.arb(behavioral)#1
+run
+run
+vcom +acc=rw arb1.vhd arb_tb1.vhd
+# QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vcom-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# Start time: 11:32:21 on Nov 18,2025
+# vcom -reportprogress 300 "+acc=rw" arb1.vhd arb_tb1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity arb
+# -- Compiling architecture Behavioral of arb
+# -- Compiling entity arb_tb1
+# -- Compiling architecture behavior of arb_tb1
+# End time: 11:32:21 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# QuestaSim-64 vopt 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# QuestaSim-64 vopt 2023.4_1 Compiler 2023.11 Nov 22 2023
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Warning: (vopt-1953) Unknown spec character 'w' in +acc option. It will be ignored.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=7.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.arb_tb1(behavior)#1
+# Loading work.arb(behavioral)#1
+run
+run
+run
+run

@@ -1,0 +1,34 @@
+--arb_tb.psl
+ 
+vunit check_arb(arb_tb(bhv))
+{
+  default clock is (rising_edge(clk));
+  
+  property constraint0 is always (cmd -> next not cmd);
+  
+  -- to be completed :
+  -- property constraint1 is always (cmd -> );
+  
+  -- to be completed :
+  -- property constraint2 is always (not cmd -> );
+  
+  assert constraint0;
+  
+  -- assert constraint1;
+  
+  -- assert constraint2;
+  
+  property assertion0 is always (cmd -> next[2] (onehot(gnt))); -- parenthesis around onehot is mandatory
+
+  -- to be completed :
+  -- property assertion1 is always ({cmd; not cmd} |=> {[*1]; A compléter});
+  
+  -- to be completed :
+  -- property assertion2 is always ({cmd; not cmd} |=> {(gnt and prev(req,2))/= to be completed});
+  
+  assert assertion0;
+  
+  -- assert assertion1;
+  
+  -- assert assertion2;
+  }

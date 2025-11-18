@@ -1,0 +1,130 @@
+
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+
+
+entity arb is
+port (clk: in std_logic;
+      cmd : in std_logic;
+      rst_n : in std_logic;		
+      req         : in std_logic_vector(0 to 2);
+	 N1,N2,N3 : out signed(0 to 1);
+      gnt         : out std_logic_vector(0 to 2));
+end arb;
+
+architecture Behavioral of arb is
+signal gnt_temp : std_logic_vector(0 to 2);
+signal cmd_pending1 : std_logic :='0';
+signal cmd_pending2 : std_logic :='0';
+
+begin
+
+process (clk, cmd, rst_n)
+
+variable N11 : signed(0 to 1) := (others => '0');
+variable N22 : signed(0 to 1) := (others => '0');
+variable N33 : signed(0 to 1) := (others => '0');
+variable count : integer :=0;
+
+begin
+
+if (rst_n = '0') then
+  count := 0;
+  N11 := (others=>'0'); -- Number of selection P1 in case of several contenders requesting communication 
+  N22 := (others=>'0'); -- Number of selection P2 in case of several contenders requesting communication 
+  N33 := (others=>'0'); -- Number of selection P3 in case of several contenders requesting communication 
+  gnt <= "000";
+elsif (clk'event and clk='1') then
+  
+        if cmd = '1' then
+            case req is
+                when "001" => gnt_temp <= "001"; 
+
+                when "010" => gnt_temp <= "010";
+
+                when "100" => gnt_temp <= "100";
+					 
+		when "011" => if (N11>N22) then
+					gnt_temp <= "010";
+					N22:= N22 + "01"; -- "01" is equal to 1 in two-complement
+					N11:= N11 - "01";
+				else
+					gnt_temp <= "001";
+					N22:= N22 - "01";
+					N11:= N11 + "01";
+				end if;
+
+		when "101" => if (N11>N33) then
+					gnt_temp <= "100";
+					N33:= N33 + "01";
+					N11:= N11 - "01"; 
+                              else
+					gnt_temp <= "001";
+					N33:= N33 - "01";
+					N11:= N11 + "01"; 
+			      end if;	
+										
+		when "110" => if (N22>N33) then
+					gnt_temp <= "100";
+					N33:= N33 + "01"; 
+					N22:= N22 - "01"; 
+                              else
+					gnt_temp <= "010"; 
+					N33:= N33 - "01";
+					N22:= N22 + "01"; 
+			      end if;	
+
+               when "111" =>  if (N11 = "10") then -- "10" is equal to -2 in two-complement
+					gnt_temp <= "001";
+					N11 := N11 + "01";
+					N22 := N22 - "01";
+					N33 := N33 - "01";
+
+			      elsif (N22 = "10") then
+					gnt_temp <= "010";
+					N11 := N11 - "01";
+					N22 := N22 + "01";
+					N33 := N33 - "01";
+
+			      elsif (N33 = "10") then
+					gnt_temp <= "100";
+					N11 := N11 - "01";
+					N22 := N22 - "01";
+					N33 := N33 + "01";
+					
+			      end if;
+            when others => gnt_temp <= "000";
+            end case;
+				cmd_pending1 <= '1';
+				cmd_pending2 <= '0';
+	                count := 1;
+       
+        end if;
+		  
+		  if (cmd_pending1 = '1') then
+				count := 2;
+				cmd_pending2 <= '1';
+                     gnt <= gnt_temp;
+        end if;
+           
+        if (cmd_pending2 = '1') then
+				 count := 3;
+                      cmd_pending1 <= '0';
+	   end if; 		 
+	   if (count = 3) then
+		count := 0;		 
+		gnt <= "000"; 
+	     cmd_pending2 <= '0';		  
+        end if; 
+      		  
+end if;
+N1 <= N11;
+N2 <= N22;
+N3 <= N33;
+
+end process;
+
+end Behavioral;
+
