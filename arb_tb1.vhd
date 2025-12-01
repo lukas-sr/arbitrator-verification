@@ -62,7 +62,6 @@ BEGIN
 		wait for clk_period/2;
    end process;
  
-
    -- Stimulus process
    stim_proc: process
    begin		
