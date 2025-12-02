@@ -15,6 +15,7 @@ architecture bhv of property_checker is
 signal save_req : std_logic_vector(2 downto 0);
 signal cmd_pending : std_logic;
 signal count : integer := 0;
+signal temp : std_logic_vector(0 to 2);
 
 begin
 
@@ -44,22 +45,27 @@ process(clk)
         
     if clk'event and clk='1' then
         --property 0
-        if (count=2 and gnt/="001" and gnt/="010" and gnt/="100") then
+        if (count = 2 and gnt/="001" and gnt/="010" and gnt/="100") then
             fails(0) <= '1';
         else
             fails(0) <= '0';
         end if;
        
-       --property 1 : to be completed
-       
-
+        --property 1 : to be completed
+        if (count = 1 and gnt /= "000") then
+            fails(1) <= '1';
+        else 
+            fails(1) <= '0';
+        end if; 
        
        --property 2 : to be completed
-       
+        temp <= gnt AND save_req;
+        if (count = 2 and temp = "000") then
+            fails(2) <= '1';
+        else 
+            fails(2) <= '0';
+        end if;       
 
-       
-
-      fails(3) <= '0';
    end if;
 end process;
 

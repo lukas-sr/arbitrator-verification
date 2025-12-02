@@ -67,19 +67,20 @@ BEGIN
    begin		
    	rst_n <= '0', '1' after 20 ns;
 	
-	cmd <= '0', '1' after 35 ns, '0' after 45 ns, 
-	       '1' after 85 ns,  '0' after 95 ns,
-	       '1' after 125 ns, '0' after 135 ns,
-	       '1' after 175 ns, '0' after 185 ns,
-	       '1' after 225 ns, '0' after 235 ns,
-	       '1' after 315 ns, '0' after 325 ns;
+	cmd <= '0', '1' after 29 ns, '0' after 41 ns, 
+	       '1' after 79 ns,  '0' after 91 ns,
+	       '1' after 119 ns, '0' after 131 ns,
+	       '1' after 169 ns, '0' after 181 ns,
+	       '1' after 219 ns, '0' after 231 ns,
+	       '1' after 309 ns, '0' after 321 ns;
 	
-	req <= "000", "001" after 35 ns, "000" after 45 ns, 
-	       "011" after 85 ns, "000" after 95 ns,
-	       "111" after 125 ns, "000" after 135 ns,
-	       "101" after 175 ns, "000" after 185 ns,
-	       "111" after 225 ns, "000" after 235 ns,
-	       "101" after 315 ns, "000" after 325 ns; 
+          req <= "000", "001" after 30 ns, "000" after 40 ns, 
+	       "011" after 80 ns, "000" after 90 ns,
+	       "111" after 120 ns, "000" after 130 ns,
+	       "101" after 170 ns, "000" after 180 ns,
+	       "111" after 220 ns, "000" after 230 ns,
+	       "101" after 310 ns, "000" after 320 ns; 
+          
 	wait;
 	
    end process;

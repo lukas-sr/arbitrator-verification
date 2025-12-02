@@ -3,8 +3,8 @@ use IEEE.std_logic_1164.all;
 
 
 entity protocol_checker is
-    port(clk, cmd :    in    std_logic;
-        req		  :    in    std_logic_vector(0 to 2);
+    port(clk, cmd 			  :    in    std_logic;
+        req		  			  :    in    std_logic_vector(0 to 2);
         protocol_violation    :    out   std_logic:='0');
 end entity;
 
@@ -18,15 +18,27 @@ begin
 
 	process(clk)
 	begin
-		if clk'event and clk='1' then 			
-			--Property 1      
-			violation_1 <=  --to be completed
-			
-			--Property 2
-			violation_2 <= '0';
-			if () then      --to be completed  
-                violation_2 <=  
-         end if;  
+		if clk'event and clk='0' then
+			-- Violation 1
+			if (cmd = '1' and count = 1) then
+				--Property 1      
+				violation_1 <= '1';
+				--Property 2
+				violation_2 <= '0';
+			end if;
+
+			count <= 0;
+			last_cmd <= '0';
+
+			if (cmd = '1') then
+				last_cmd <= '1';
+				count <= count + 1;
+			end if;
+
+			-- Violation 2
+			if (req = "000" and cmd = '1') then
+                violation_2 <= '1';
+         	end if;  
 		end if;
 	end process;
 
