@@ -12,7 +12,7 @@ architecture bhv of arb_tb2 is
 -- inputs and outputs
 signal clk, cmd, protocol_violation, rst_n : std_logic :='0';
 signal req, gnt : std_logic_vector(0 to 2);
-signal fails    : std_logic_vector(0 to 2);
+signal fails    : std_logic_vector(0 to 3);
 signal n1,n2,n3 : signed (0 to 1);
 
 begin

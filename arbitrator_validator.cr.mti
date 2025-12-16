@@ -1,0 +1,89 @@
+/home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1.vhd
+QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity arb_tb1
+-- Compiling architecture behavior of arb_tb1
+
+} {} {}} {/home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd} {0 {vcom -work work -2002 -explicit -vopt -stats=none {/home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd}
+QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity arb_tb1
+-- Compiling architecture behavior of arb_tb1
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(69): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(69): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(71): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(72): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(72): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(73): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(73): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(74): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(74): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(75): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(75): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(76): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(76): String literal found where non-array type ieee.std_logic_1164.STD_LOGIC was expected.
+** Warning: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(88): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+** Note: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb1_ tobe_completed.vhd(90): VHDL Compiler exiting
+
+} {9.0 24.0} {}} /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb2.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb2.vhd
+QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity arb_tb2
+-- Compiling architecture bhv of arb_tb2
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb2.vhd(14): (vcom-1136) Unknown identifier "signed".
+-- Loading package NUMERIC_STD
+-- Loading entity arb
+** Error: (vcom-11) Could not find work.property_checker.
+** Error (suppressible): /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb2.vhd(23): (vcom-1195) Cannot find expanded name "work.property_checker".
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb2.vhd(23): Unknown expanded name.
+** Error: (vcom-11) Could not find work.protocol_checker.
+** Error (suppressible): /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb2.vhd(26): (vcom-1195) Cannot find expanded name "work.protocol_checker".
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb2.vhd(26): Unknown expanded name.
+** Note: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tb2.vhd(32): VHDL Compiler exiting
+
+} {8.0 9.0 11.0 12.0 13.0 15.0 16.0 17.0} {}} /home/silvadal/Documents_distants/SE517/arbitrator-verification/driver_tobe_completed.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/silvadal/Documents_distants/SE517/arbitrator-verification/driver_tobe_completed.vhd
+QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package MATH_REAL
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity driver
+-- Compiling architecture bhv of driver
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/driver_tobe_completed.vhd(21): Cannot drive signal 'clk' of mode IN.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/driver_tobe_completed.vhd(77): near "end": (vcom-1576) expecting BEGIN.
+** Note: /home/silvadal/Documents_distants/SE517/arbitrator-verification/driver_tobe_completed.vhd(79): VHDL Compiler exiting
+
+} {11.0 13.0} {}} /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tobe_completed.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tobe_completed.vhd
+QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity arb
+-- Compiling architecture Behavioral of arb
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tobe_completed.vhd(58): near "when": (vcom-1576) expecting END.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tobe_completed.vhd(62): near "else": (vcom-1576) expecting END or WHEN.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tobe_completed.vhd(68): near "when": (vcom-1576) expecting END.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tobe_completed.vhd(72): near "else": (vcom-1576) expecting END.
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tobe_completed.vhd(76): near "if": (vcom-1576) expecting ';'.
+** Note: /home/silvadal/Documents_distants/SE517/arbitrator-verification/arb_tobe_completed.vhd(76): VHDL Compiler exiting
+
+} {9.0 14.0} {}} /home/silvadal/Documents_distants/SE517/arbitrator-verification/simple_arb.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/silvadal/Documents_distants/SE517/arbitrator-verification/simple_arb.vhd
+QuestaSim-64 vcom 2023.4_1 Compiler 2023.11 Nov 22 2023
+-- Loading package STANDARD
+** Error: /home/silvadal/Documents_distants/SE517/arbitrator-verification/simple_arb.vhd(5): near "use": (vcom-1576) expecting IDENTIFIER.
+** Note: /home/silvadal/Documents_distants/SE517/arbitrator-verification/simple_arb.vhd(5): VHDL Compiler exiting
+
+} {4.0 5.0} {}}
