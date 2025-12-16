@@ -49,8 +49,8 @@ begin
 	        "111" after 220 ns, "000" after 230 ns,
   	        "101" after 310 ns, "000" after 320 ns; 
 
-	
-          
+	cmd <= '1' after 400 ns, '0'
+	          
 	wait;
 	
 end process;
