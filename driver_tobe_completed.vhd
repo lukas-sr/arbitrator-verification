@@ -21,59 +21,61 @@ begin
 clk <= not(clk) after 10 ns;
 
 process(clk)
--- Seed values for random generator
-   variable seed1, seed2: positive;
--- Random real-number value in range 0 to 1.0
-   variable rand: real;
--- Random integer value in range 0..7
-   variable int_rand_wait, int_rand_req, count: integer := 0;
--- Next req
-   variable req_next : std_logic_vector(2 downto 0) :="000"; 
-   
-   begin
--- initialise seed1, seed2 if you want -
--- otherwise they're initialised to 1 by default
-   
-   if count=0 then
-       -- Random wait
-       UNIFORM(seed1, seed2, rand);
-       -- 1. rescale to 1..n, find integer part
-       int_rand_wait := INTEGER(TRUNC(rand*n)) + 1;
+    -- Random generator
+    variable seed1, seed2 : positive := 1;
+    variable rand : real;
 
-       -- Random req
-       UNIFORM(seed1, seed2, rand);
-      -- get a 3-bit random value...
-      -- 1. rescale to 0..7, find integer part
-      int_rand_req := INTEGER(TRUNC(rand*8.0));
-      -- 2. convert to std_logic_vector
-      req_next := std_logic_vector(to_unsigned(int_rand_req, req'LENGTH));
-   end if;
-   
+    variable int_rand_wait : integer := 0;
+    variable int_rand_req  : integer := 0;
+    variable count         : integer := 0;
 
-   if clk'event and clk='1' then
-   --To be completed
+    variable req_next : std_logic_vector(2 downto 0) := "000";
+begin
 
+    if rising_edge(clk) then
 
+        -- Generate new random values when counter expires
+        if count = 0 then
 
+            -- Random wait between 1 and n cycles
+            UNIFORM(seed1, seed2, rand);
+            int_rand_wait := integer(trunc(rand * n)) + 1;
 
+            -- Random req between 0 and 7
+            UNIFORM(seed1, seed2, rand);
+            int_rand_req := integer(trunc(rand * 8.0));
+            req_next := std_logic_vector(to_unsigned(int_rand_req, 3));
 
+            count := int_rand_wait;
+            req <= req_next;
+            cmd <= '1';
 
+        else
+            count := count - 1;
+            cmd <= '0';
+        end if;
 
-
-
-   end if;
-       
+    end if;
 end process;
 
+-- Display process
+        
 process(cmd)
-   --To be completed for display req,n1,n2 and n3
-   
-   
-   
-   
-   
-   
+    variable L : line;
+begin
+    if cmd = '1' then
+        write(L, string'("REQ="));
+        write(L, req);
+        write(L, string'(" N1="));
+        write(L, n1);
+        write(L, string'(" N2="));
+        write(L, n2);
+        write(L, string'(" N3="));
+        write(L, n3);
+        writeline(log_file, L);
+    end if;
+end process;
 
- end process;         
+end architecture;
 
 end architecture;
