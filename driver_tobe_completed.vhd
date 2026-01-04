@@ -2,23 +2,25 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.math_real.all; -- for UNIFORM, TRUNC
-use ieee.numeric_std.all; -- for TO_UNSIGNED
+use ieee.math_real.all;      -- UNIFORM, TRUNC
+use ieee.numeric_std.all;    -- TO_UNSIGNED
 use std.textio.all;
 use ieee.std_logic_textio.all;
 
 entity driver is
-    port(   clk : in   std_logic;
-            cmd   :   inout   std_logic;
-            n1,n2,n3 : in signed( 0 to 1 );
-            req   :   inout  std_logic_vector(0 to 2));
+    port(
+        clk : in std_logic;
+        cmd : inout std_logic;
+        n1, n2, n3 : in signed(0 to 1);
+        req : inout std_logic_vector(0 to 2)
+    );
 end entity;
 
 architecture bhv of driver is
-constant n : real:=10.0;
-begin
+    constant n : real := 10.0;
 
-clk <= not(clk) after 10 ns;
+    file log_file : text open write_mode is "Display.txt";
+begin
 
 process(clk)
     -- Random generator
@@ -58,24 +60,26 @@ begin
     end if;
 end process;
 
--- Display process
-        
-process(cmd)
+
+-- Display process ( to show in display.txt file)
+process(clk)
     variable L : line;
 begin
-    if cmd = '1' then
-        write(L, string'("REQ="));
-        write(L, req);
-        write(L, string'(" N1="));
-        write(L, n1);
-        write(L, string'(" N2="));
-        write(L, n2);
-        write(L, string'(" N3="));
-        write(L, n3);
-        writeline(log_file, L);
+    if rising_edge(clk) then
+        if cmd = '1' then
+            write(L, string'("Driver is alive "));
+            write(L, string'("REQ="));
+            write(L, req);
+            write(L, string'(" N1="));
+            write(L, integer'image(to_integer(n1)));
+            write(L, string'(" N2="));
+            write(L, integer'image(to_integer(n2)));
+            write(L, string'(" N3="));
+            write(L, integer'image(to_integer(n3)));
+            writeline(log_file, L);
+        end if;
     end if;
 end process;
 
-end architecture;
 
 end architecture;
