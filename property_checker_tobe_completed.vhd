@@ -45,22 +45,22 @@ process(clk)
         
     if clk'event and clk='1' then
         --property 0
-        if (cmd = '1' and count = 2 and (gnt/="001" or gnt/="010" or gnt/="100" or gnt /= "000")) then
+        if (count = 2 and (gnt/="001" or gnt/="010" or gnt/="100" or gnt /= "000")) then
             fails(0) <= '1';
         else
             fails(0) <= '0';
         end if;
        
-        --property 1: when the cmd was OFF before two clock cycles and the actual gnt is not ?000?
-        if (cmd = '0' and count = 1 and gnt /= "000") then
+        --property 1: cmd was OFF before two clock cycles and the gnt != 000
+        if (cmd_pending = '0' and count = 2 and gnt /= "000") then
             fails(1) <= '1';
         else 
             fails(1) <= '0';
         end if; 
        
-       --property 2: when the cmd was ON before two clock cycles and the actual gnt multiplied to the saved req is ?000?
+       --property 2: cmd was ON before two clock cycles and the gnt * saved req is 000
         temp <= gnt AND save_req;
-        if (cmd = '1' and count = 2 and temp = "000") then
+        if (cmd_pending = '1' and count = 2 and temp = "000") then
             fails(2) <= '1';
         else 
             fails(2) <= '0';

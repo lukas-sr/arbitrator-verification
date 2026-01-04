@@ -20,31 +20,21 @@ begin
 
 	process(clk)
 	begin
-		if clk'event and clk='0' then
-			--------- Violation 1
-			if (cmd = '1' and count = 1) then
-				-- Property 1      
-				violation_1 <= '1';
-			end if;
+		if clk'event and clk='1' then 	
+			-- Violation 1: if cmd is high two cycles in a row		
+            if (cmd = '1' and last_cmd = '1') then
+                violation_1 <= '1';
+            else
+                violation_1 <= '0';
+            end if;
+            
+            -- Violation 2: if cmd is high and no request is made
+            violation_2 <= '0';
+            if (cmd = '1' and req = "000") then
+                violation_2 <= '1';
+            end if;
 
-			count <= 0;
-			last_cmd <= '0';
-
-			if (cmd = '1') then
-				last_cmd <= '1';
-				count <= count + 1;
-			end if;
-
-			--------- Violation 2
-			if (req = "000" and cmd = '1') then
-				-- Property 2
-                		violation_2 <= '1';
-			
-			else
-				violation_1 <= '0';
-				violation_2 <= '0';
-			end if;
-
+            last_cmd <= cmd;
 		end if;
 	end process;
 	

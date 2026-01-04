@@ -9,49 +9,112 @@ end;
 
 architecture bhv of arb_tb2 is
 
--- inputs and outputs
-signal clk, cmd, protocol_violation, rst_n : std_logic :='0';
-signal req, gnt : std_logic_vector(0 to 2);
-signal fails    : std_logic_vector(0 to 2);
-signal n1,n2,n3 : signed (0 to 1);
+    signal clk, cmd, rst_n, protocol_violation : std_logic :='0';
+    signal req      : std_logic_vector(0 to 2) := "000";
+    signal gnt      : std_logic_vector(0 to 2);
+    signal fails    : std_logic_vector(0 to 3);
+    signal n1,n2,n3 : signed (0 to 1);
+
+    constant clk_period : time := 10 ns;
 
 begin
 
-rst_n <= '1'; --activation des assertions
-clk <= not(clk) after 10 ns;
-
-m_arbiter : entity work.arb(Behavioral)
-port map (cmd, clk, rst_n, req,n1,n2,n3,gnt);
-
-m_property_checker : entity work.property_checker(bhv)
-port map(clk, cmd, req, gnt, fails);
-
-m_protocol_checker : entity work.protocol_checker(bhv)
-port map(clk, cmd, req, protocol_violation);
+    -- Clock process definitions
+    clk_process :process
+    begin
+        clk <= '0';
+        wait for clk_period/2;
+        clk <= '1';
+        wait for clk_period/2;
+    end process;
 
 
--- Stimulus process
-stim_proc: process
-begin		
-	rst_n <= '0', '1' after 20 ns;
+    m_arbiter : entity work.arb(Behavioral)
+        port map(
+            clk => clk,
+            cmd => cmd,
+            rst_n => rst_n,
+            req => req,
+            N1 => n1, N2 => n2, N3 => n3,
+            gnt => gnt
+        );
 
-	cmd <= '0', '1' after 29 ns, '0' after 41 ns, 
-	       '1' after 79 ns,  '0' after 91 ns,
-	       '1' after 119 ns, '0' after 131 ns,
-	       '1' after 169 ns, '0' after 181 ns,
-	       '1' after 219 ns, '0' after 231 ns,
-	       '1' after 309 ns, '0' after 321 ns;
-	
-         req <= "000", "001" after 30 ns, "000" after 40 ns, 
-	        "011" after 80 ns, "000" after 90 ns,
-	        "111" after 120 ns, "000" after 130 ns,
-	        "101" after 170 ns, "000" after 180 ns,
-	        "111" after 220 ns, "000" after 230 ns,
-  	        "101" after 310 ns, "000" after 320 ns; 
+    m_property_checker : entity work.property_checker(bhv)
+        port map(
+            clk  => clk,
+            cmd  => cmd,
+            req  => req,
+            gnt  => gnt,
+            fails => fails
+        );
 
-	cmd <= '1' after 400 ns, '0'
-	          
-	wait;
-	
-end process;
-end;
+    m_protocol_checker : entity work.protocol_checker(bhv)
+        port map(
+            clk => clk,
+            cmd => cmd,
+	    req => req,
+	    protocol_violation => protocol_violation
+        );
+
+    stim_proc: process
+    begin
+        rst_n <= '0', '1' after 20 ns;
+
+        cmd <= '1';
+        req <= "001";
+        wait for 20 ns;
+        cmd <= '0';
+        req <= "000";
+        wait for 60 ns;
+
+        cmd <= '1';
+        req <= "011";   
+        wait for 20 ns;
+        cmd <= '0';
+        req <= "000";
+        wait for 80 ns;
+
+        cmd <= '1';
+        req <= "101";
+        wait for 20 ns;
+        cmd <= '0';
+        req <= "000";
+        wait for 80 ns;
+
+        cmd <= '1';
+        req <= "010";
+        wait for 20 ns;
+
+        -- introducing a protocol violation: req changes when cmd is high
+        cmd <= '0';
+        req <= "000";
+        wait for 20 ns;
+
+        cmd <= '0';
+        req <= "000";
+        wait for 60 ns;
+
+        -- introducing a protocol violation: req changes when cmd is high
+        cmd <= '1';
+        req <= "001";
+        wait for 20 ns;
+
+        cmd <= '0';
+        req <= "000";
+        wait for 60 ns;
+
+        cmd <= '1';
+        req <= "001";    
+        wait for 20 ns;
+
+        cmd <= '0';
+        req <= "000";
+
+        -- here we see fail(2)
+        wait for 30 ns;
+        req <= "000";     
+        wait for 60 ns;
+
+        wait;
+    end process;
+end bhv;
